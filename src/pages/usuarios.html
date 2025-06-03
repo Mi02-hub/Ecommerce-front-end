@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Usuários</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Usuários</h1>
+    <nav>
+      <ul>
+        <li><a href="/src/index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Lista de Usuários</h2>
+    <form id="addUserForm" class="add-form">
+      <input type="number" id="userId" placeholder="ID" required>
+      <input type="text" id="userName" placeholder="Nome" required>
+      <input type="email" id="userEmail" placeholder="Email" required>
+      <select id="userProfile" required>
+        <option value="Administrador">Administrador</option>
+        <option value="Cliente">Cliente</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+    <table id="usersTable" class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Perfil</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="usersTableBody">
+        <!-- Dados serão preenchidos via JavaScript -->
+      </tbody>
+    </table>
+  </main>
+  <script src="../js/usuarios.js"></script>
+</body>
+</html>

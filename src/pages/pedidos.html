@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Pedidos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lista de Pedidos</h1>
+    <nav>
+      <ul>
+        <li><a href="/src/index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="usuarios.html">Usuários</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Pedidos Registrados</h2>
+    <form id="addOrderForm" class="add-form">
+      <input type="number" id="orderId" placeholder="ID" required>
+      <input type="text" id="orderUser" placeholder="Usuário" required>
+      <select id="orderStatus" required>
+        <option value="Enviado">Enviado</option>
+        <option value="Pendente">Pendente</option>
+      </select>
+      <input type="date" id="orderDate" required>
+      <button type="submit">Adicionar</button>
+    </form>
+    <table id="ordersTable" class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuário</th>
+          <th>Status</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="ordersTableBody">
+        <!-- Dados serão preenchidos via JavaScript -->
+      </tbody>
+    </table>
+  </main>
+  <script src="../js/pedidos.js"></script>
+</body>
+</html>

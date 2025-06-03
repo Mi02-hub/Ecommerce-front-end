@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Produtos</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Produtos</h1>
+    <nav>
+      <ul>
+        <li><a href="/src/index.html">Início</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="usuarios.html">Usuários</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Lista de Produtos</h2>
+    <form id="addProductForm" class="add-form">
+      <input type="number" id="productId" placeholder="ID" required>
+      <input type="text" id="productName" placeholder="Nome" required>
+      <input type="text" id="productPrice" placeholder="Preço (R$)" required>
+      <input type="text" id="productCategory" placeholder="Categoria" required>
+      <button type="submit">Adicionar</button>
+    </form>
+    <table id="productsTable" class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Categoria</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="productsTableBody">
+        <!-- Dados serão preenchidos via JavaScript -->
+      </tbody>
+    </table>
+  </main>
+  <script src="../js/produtos.js"></script>
+</body>
+</html>
